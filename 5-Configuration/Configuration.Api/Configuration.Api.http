@@ -1,0 +1,9 @@
+@Configuration.Api_HostAddress = http://localhost:5163
+
+GET {{Configuration.Api_HostAddress}}/config
+Accept: text/plain
+
+###
+
+GET {{Configuration.Api_HostAddress}}/options/
+Accept: text/plain

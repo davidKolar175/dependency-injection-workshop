@@ -1,0 +1,6 @@
+@_0_ResolvingServices.Api_HostAddress = http://localhost:5269
+
+GET {{_0_ResolvingServices.Api_HostAddress}}/form/
+Accept: application/json
+
+###

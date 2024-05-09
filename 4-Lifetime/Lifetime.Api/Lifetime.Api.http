@@ -1,0 +1,6 @@
+@Lifetime.Api_HostAddress = https://localhost:7116
+
+GET {{Lifetime.Api_HostAddress}}/id
+Accept: text/plain
+
+###
