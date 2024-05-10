@@ -4,7 +4,7 @@ using ScrutorScanning.ConsoleApp.ServiceMarkers;
 namespace ScrutorScanning.ConsoleApp.Services;
 
 [Singleton]
-[Transient]
+//[Transient]
 public class ExampleBService : IExampleBService
 {
 

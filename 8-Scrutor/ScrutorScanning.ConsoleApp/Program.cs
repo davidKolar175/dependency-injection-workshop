@@ -2,8 +2,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Scrutor;
 using ScrutorScanning.ConsoleApp.Attributes;
-using ScrutorScanning.ConsoleApp.ServiceMarkers;
-using ScrutorScanning.ConsoleApp.Services;
 
 var services = new ServiceCollection();
 
@@ -12,19 +10,6 @@ var services = new ServiceCollection();
 services.Scan(selector =>
 {
     selector
-        // .FromAssemblyOf<Program>()
-        //     .AddClasses(f => f.AssignableTo<ISingletonService>())
-        //         .AsImplementedInterfaces()
-        //         .WithSingletonLifetime()
-        //
-        //     .AddClasses(f => f.AssignableTo<ITransientService>())
-        //         .AsImplementedInterfaces()
-        //         .WithTransientLifetime()
-        //
-        //     .AddClasses(f => f.AssignableTo<IScopedService>())
-        //         .AsImplementedInterfaces()
-        //         .WithScopedLifetime();
-
         .FromAssemblyOf<Program>()
             .AddClasses(f => f.WithAttribute<SingletonAttribute>())
                 .AsImplementedInterfaces()
@@ -39,9 +24,23 @@ services.Scan(selector =>
                 .AsImplementedInterfaces()
                 .WithScopedLifetime();
 
-        // .FromAssemblyOf<Program>()
-        //     .AddClasses()
-        //         .UsingAttributes();
+    // .FromAssemblyOf<Program>()
+    //     .AddClasses(f => f.AssignableTo<ISingletonService>())
+    //         .AsImplementedInterfaces()
+    //         .WithSingletonLifetime()
+    //
+    //     .AddClasses(f => f.AssignableTo<ITransientService>())
+    //         .AsImplementedInterfaces()
+    //         .WithTransientLifetime()
+    //
+    //     .AddClasses(f => f.AssignableTo<IScopedService>())
+    //         .AsImplementedInterfaces()
+    //         .WithScopedLifetime();
+
+
+    // .FromAssemblyOf<Program>()
+    //     .AddClasses()
+    //         .UsingAttributes();
 });
 
 PrintRegisteredService(services);

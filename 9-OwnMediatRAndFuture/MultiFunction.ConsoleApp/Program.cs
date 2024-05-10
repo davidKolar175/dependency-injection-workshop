@@ -21,7 +21,7 @@ var serviceProvider = services.BuildServiceProvider();
 var application = serviceProvider.GetRequiredService<Application>();
 if (args.Length == 0)
 {
-    args = new[] { "weather" };
+    args = new[] { "time" };
 }
 
 await application.RunAsync(args);
