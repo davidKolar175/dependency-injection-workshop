@@ -21,7 +21,7 @@ public class DieselCar : Car
 
 public class PetrolCar : Car
 {
-    public required PetrolCar Engine { get; set; }
+    public required PetrolEngine Engine { get; set; }
 }
 
 public class DieselEngine : Engine
