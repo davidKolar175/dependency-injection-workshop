@@ -3,6 +3,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Scrutor;
 using ScrutorScanning.ConsoleApp.Attributes;
 
+// Knihovna Scrutor
+// Jak by se dala její funkčnost využít v novém serveru?
+
 var services = new ServiceCollection();
 
 //services.AddTransient<IExampleAService, ExampleAService>();

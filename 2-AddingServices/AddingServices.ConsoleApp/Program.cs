@@ -24,7 +24,7 @@ serviceCollection.Add(new ServiceDescriptor(typeof(IUserService), typeof(UserSer
 //    new ServiceDescriptor(typeof(IUserService), typeof(UserService2), ServiceLifetime.Singleton)
 //]);
 
-var serviceProvider = serviceCollection.BuildServiceProvider(); // Sestavení stromu závislostí
+var serviceProvider = serviceCollection.BuildServiceProvider();
 
 var userService = serviceProvider.GetRequiredService<IUserService>();
 //var userService = serviceProvider.GetKeyedService<IUserService>("klíč_123");

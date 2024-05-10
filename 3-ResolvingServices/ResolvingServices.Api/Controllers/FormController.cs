@@ -17,6 +17,7 @@ public class FormController : ControllerBase
     [HttpGet(Name = "form")]
     public string Get([FromServices] ILogger<FormController> logger)
     {
+        // HttpContext.RequestServices.GetService
         logger.LogInformation(_formService.GetForm());
         return _formService.GetForm();
     }

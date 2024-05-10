@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 var serviceCollection = new ServiceCollection();
 
-serviceCollection.AddSingleton<IUserService, UserService>();
+serviceCollection.AddSingleton<IUserService, UserService>(); // Zmínit ServiceDescriptor
 
 var serviceProvider = serviceCollection.BuildServiceProvider(); // Sestavení stromu závislostí
 
