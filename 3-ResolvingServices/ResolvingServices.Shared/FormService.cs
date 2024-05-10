@@ -7,7 +7,7 @@ public class FormService : IFormService
     private readonly IFormRepository _formRepository;
     private readonly HashGenerator _hashGenerator;
 
-    public FormService(IFormRepository formRepository, [FromKeyedServices("second")] HashGenerator hashGenerator)
+    public FormService(IFormRepository formRepository, [FromKeyedServices("first")] HashGenerator hashGenerator)
     {
         _formRepository = formRepository;
         _hashGenerator = hashGenerator;

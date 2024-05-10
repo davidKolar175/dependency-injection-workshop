@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Zajímavá je kobinace transient a singletonu, musíme dávat pozor na zachycení instance
 // Kombinace singleton a scoped padá, ukázat pøíklad AddScoped<IdGenerator> a AddSingleton<ServiceA>
 // Circular dependency padá
-// Závislost singletonu na transient je možná, ale bacha na možná neoèekávané chování
+// Závislost singletonu na transient je možná, ale bacha na možná neoèekávané chování AddTransient<IdGenerator> a AddSingleton<ServiceA>
 
 builder.Services.AddSingleton<IdGenerator>();
 builder.Services.AddSingleton<ServiceA>();
